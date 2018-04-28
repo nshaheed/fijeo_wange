@@ -129,7 +129,7 @@ arrowSpan = {
   }  
   \override Glissando.arrow-length = #0.5
   \override Glissando.arrow-width = #0.25
-  \alterBroken transparent #'(#f #t) TextSpanner % must be a list
+  \alterBroken transparent #'(#f #t) TextSpanner % must be a list % change this to fix the invisible arrows (make function)
 }
 
 arrowSpanRevert = {
@@ -144,11 +144,12 @@ arrowSpanRevert = {
 arrowStart = {
   \stopStaff 
   \override Staff.Clef.transparent = ##f
-  \override Staff.Clef.break-visibility = #all-invisible
+  \override Staff.Clef.break-visibility = #all-invisible % this is what messes with the clefs
   \override Staff.StaffSymbol.transparent = ##t
   \startStaff
   \override TextSpanner.thickness = #2
-  \override TextSpanner.extra-offset = #'(0 . -3.1)    
+  \override TextSpanner.extra-offset = #'(0 . -3.1)
+  % \override TextSpanner.break-visibility = #all-invisible  
 }
 
 arrowInvs = {

@@ -13,6 +13,8 @@
 
 violinone = \relative c'' {
   \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.Clef.full-size-change = ##t
+
   \time 3/16
   \cell {
     e16-.->
@@ -34,7 +36,8 @@ violinone = \relative c'' {
   }
 
   \time 1/16
-  \beginArrow s16\startTextSpan\breathe
+  \beginArrow
+  s16\startTextSpan\breathe
   s16
   s16\stopTextSpan
   % s8 s8.
@@ -50,7 +53,8 @@ violinone = \relative c'' {
 
 				% \time 3/16
   \time 1/16
-  \beginArrow s16\startTextSpan\breathe
+  \beginArrow
+  s16\startTextSpan\breathe
   s16*8
 				% s8 s8. s8.
 				% s8. s8
@@ -107,6 +111,7 @@ violinone = \relative c'' {
 
 violintwo = \relative c'' {
   \override Staff.TimeSignature #'stencil = ##f
+  \override Staff.Clef.full-size-change = ##t
   \time 3/16
   \cell {
     e16-.-> e16-.->[ e16-.->]
